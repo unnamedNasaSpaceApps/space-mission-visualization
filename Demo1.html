@@ -12,11 +12,11 @@
 	<script src="mission1.js" type="text/javascript"></script>
 </head>
 <body>
+<div class="title"><h2>Prototype Web Visualization of a GMAT Generated Trajectory</h2></div>
 
-<h2>Prototype Web Visualization of a GMAT Generated Trajectory</h2>
-
+<div class="content">
 	<p class="case"> 
-		<X3D xmlns="http://www.web3d.org/specifications/x3d-namespace" showStat="false" showLog="false" x="0px" y="0px" width="800px" height="600px">
+		<X3D xmlns="http://www.web3d.org/specifications/x3d-namespace" showStat="false" showLog="false" x="0px" y="0px" width="80vw" height="80vh">
           <Scene>
 			<background DEF='bgnd' transparency='0' skyColor='0.0 0.0 0.0' ></background>
 		</Transform>
@@ -37,6 +37,7 @@
           </Scene>
         </X3D>
     </p>
+</div>
 	
 	<p class="case" align="center">
 	
@@ -193,15 +194,8 @@ mission.coordinates[154].Time ;
 
 </script>
 <script type="text/javascript" src="x3dom.js"></script>
-<input type="button" id="reset" value="Reset" onclick="resetPosition();" />
-<input type="file" id="fileInput">
-<br>
-<p style="width:800px">
-Using time-stamped Cartesian coordinate data generated from NASA's General Mission Analysis Tool (GMAT), this
-interactive visualization depicts an orbital trajectory as a red dashed ellipse with a blue sphere located at
-one of the foci. The can be rotated by holding down the left mouse button and dragging the mouse. The scene can
-panned by holding down the middle mouse button and dragging the mouse. Use the middle mouse wheel to zoom-in
-or zoom-out of the scene.
-</p>
+<div class="buttons">
+	<input type="button" id="reset" value="Reset" onclick="resetPosition();" />
+</div>
 </body>
 </html>

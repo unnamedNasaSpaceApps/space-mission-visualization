@@ -14,10 +14,10 @@
 </head>
 <body onload="initialize()">
 
-<h1>Earth Moon Scenegraph for Depicting Cis-Lunar Trajectories</h1>
+	<div class="title"><h2>Earth Moon Scenegraph for Depicting Cis-Lunar Trajectories</h2></div>
 
 	<p class="case"> 
-		<X3D xmlns="http://www.web3d.org/specifications/x3d-namespace" showStat="false" showLog="false" x="0px" y="0px" width="800px" height="600px">
+		<X3D xmlns="http://www.web3d.org/specifications/x3d-namespace" showStat="false" showLog="false" x="0px" y="0px" width="80vw" height="70vh">
           <Scene id="cisMars">
 			<background DEF='bgnd' transparency='0' skyColor='0.0 0.0 0.0' ></background>
 	     <Viewpoint id="bigPicture" position="-0.93 -4.57055 0.64278" orientation="0.98953 -0.13628 -0.04750 1.37925" description="Default View"></Viewpoint>			
@@ -315,23 +315,18 @@ function initialize() {
  </script>
 <script type="text/javascript" src="x3dom.js"></script>
 <!-- <input type="file" id="files" name="files[]" multiple /> -->
-<input type="button" id="start" value="Start" onclick="startUpdate();" />
+<div class="buttons">
+	<input type="button" id="start" value="Start" onclick="startUpdate();" />
 <input type="button" id="reset" value="Reset" onclick="resetPosition();" />
-<button id="theBigPicture" onclick="document.getElementById('bigPicture').setAttribute('set_bind','true');">Big Picture</button>
-<button id="theSatCam" onclick="document.getElementById('satCam').setAttribute('set_bind','true');">View Satellite</button>
-<button id="theSatCam" onclick="document.getElementById('marsCam').setAttribute('set_bind','true');">View Mars</button>
+<input type="button" id="theBigPicture" onclick="document.getElementById('bigPicture').setAttribute('set_bind','true');" value="Big Picture"/>
+<input type="button" id="theSatCam" onclick="document.getElementById('satCam').setAttribute('set_bind','true');" value="View Satellite"/>
+<input type="button" id="theSatCam" onclick="document.getElementById('marsCam').setAttribute('set_bind','true');" value="View Mars"/>
+</div>
 
 <p>
 <!-- Simulation Speed <br><input type="range" id="myRange" name="points" min="1" max="100" value="1" step="1" onchange="showValue(this.value)"/><br>&nbsp; &nbsp; -->
 
    <p><p>
    <p id="rotationStats"> </p>
-   <br>
-  	<p style="width:800px">Using NASA's General Mission Analysis Tool (GMAT), Cartesian coordinates were generated for a trajectory from the Earth to the Moon. The interactive visualization
-	depicts the Earth, Moon, a space probe, and the trajectory. Buttons beneath the visualization include Start, Reset, Big Picture, View Satellite, and View Moon. Click on the Start
-	button to animate the movement of the space probe along the trajectory. The Reset button puts the space probe in the initial position. The View Satellite and View Moon buttons 
-	changes the point of view. The view can be panned with a left click and drag and the middle mouse button enables zoom-in and zoom-out. The Big Picture button resets the view to
-	show the entire trajectory.
-	</p>
 </body>
 </html>

@@ -13,10 +13,11 @@
 </head>
 <body onload="handleFile()">
 
-<h1>Visualization of JSON Formatted Trajectory Data</h1>
+<div class="title"><h2>Visualization of JSON Formatted Trajectory Data</h2></div>
 
+<div class="content">
 	<p class="case"> 
-		<X3D xmlns="http://www.web3d.org/specifications/x3d-namespace" showStat="false" showLog="false" x="0px" y="0px" width="800px" height="600px">
+		<X3D xmlns="http://www.web3d.org/specifications/x3d-namespace" showStat="false" showLog="false" x="0px" y="0px" width="80vw" height="75vh">
           <Scene>
 			<background DEF='bgnd' transparency='0' skyColor='0.0 0.0 0.0' ></background>
 	   </Transform>
@@ -38,6 +39,7 @@
           </Scene>
         </X3D>
     </p>
+</div>
 	
 	<p class="case" align="center">
 	
@@ -376,14 +378,10 @@ function start(trajectory){
 	};
  </script>
 <script type="text/javascript" src="x3dom.js"></script>
-<input type="file" id="files" name="files[]" multiple />
-<input type="button" id="reset" value="Reset" onclick="resetPosition();" />
+<div class="buttons">
+	<input type="file" id="files" name="files[]" multiple />
+	<input type="button" id="reset" value="Reset" onclick="resetPosition();" />
+</div>
 <p id="rotationStats"> </p>
-<br>
-<p style="width:800px">
-This web-app reads a trajectory data file expressed in JavaScript Object Notation (JSON) 
-and visualizes that trajectory as a red dashed line. Click the Browse button to load a JSON file.
-The Reset button sets a satellite model to the initial position and restarts the animation.
-</p>
 </body>
 </html>
